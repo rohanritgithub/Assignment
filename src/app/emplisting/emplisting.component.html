@@ -1,0 +1,38 @@
+<div class="m-3 ">
+    <a routerLink="create" #btn class="btn btn-primary btn-sm ">Add new Emp</a>
+</div>
+
+<div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped table-hover text-center" id="datatable" role="grid">
+                    <thead class="bg-primary text-white">
+                        <tr>
+                            <th>Id</th>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Catregory</th>
+                            <!-- <th>Designation</th>  -->
+                            <th>Action</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of employeedata">
+                            <td>{{item.id}}</td>
+                            <td>{{item.productName}}</td>
+                            <td>{{item.price}}</td>
+                            <td>{{item.category}}</td>
+                            <!-- <td>{{item.Designation}}</td> -->
+                            <td><button routerLink="Edit/{{item.id}}"
+                                    class="btn btn-info btn-sm">Edit</button>&nbsp;|&nbsp;<button
+                                    (click)="delete(item.id)" class="btn btn-danger btn-sm">Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" >

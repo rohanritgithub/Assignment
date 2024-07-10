@@ -1,0 +1,39 @@
+{
+  "employee": [
+    {
+      "productName": "Jeans",
+      "price": "20000",
+      "category": "men",
+      "id": 1
+    }
+  ],
+  "degisation": [
+    {
+      "code": "men",
+      "name": "Men",
+      "id": 1
+    },
+    {
+      "code": "women",
+      "name": "Women",
+      "id": 2
+    },
+    {
+      "code": "kids",
+      "name": "Kids",
+      "id": 3
+    }
+  ],
+  "logincre": [
+    {
+      "loginid": "rohan",
+      "password": "rohan",
+      "id": 1
+    },
+    {
+      "loginid": "asasdsad",
+      "password": "asdasdas",
+      "id": 2
+    }
+  ]
+}

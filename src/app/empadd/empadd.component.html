@@ -1,0 +1,76 @@
+<div class="container">
+    <button class="btn btn-primary" (click)="goBack()">Back</button>
+    <div class="row">
+        <div class="card">
+            <form action="" [formGroup]="employeeForm" (ngSubmit)="Saveemployee()">
+                <div class="row text-center">
+                    <h2>Add/update Product</h2>
+                </div>
+                <div class="row">
+                    <div class="offset-lg-3 col-lg-6">
+                        <div class="form-group">
+                            <label for="txtcode">Id</label>
+                            <input type="text" id="" class="form-control" formControlName="id" #txtcode>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-lg-3 col-lg-6">
+                        <div class="form-group">
+                            <label for="txtname">ProductName</label>
+                            <input type="text" id="" class="form-control" formControlName="productName" #txtname>
+                        </div>
+                        <span *ngIf="name && name.invalid && name.touched">Please Enter Productr Name</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-lg-3 col-lg-6">
+                        <div class="form-group">
+                            <label for="txtemail">Price</label>
+                            <input type="text" id="" class="form-control" formControlName="price" #txtemail>
+                        </div>
+                        <span *ngIf="email && email.invalid && email.touched">Please Enter Price</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-lg-3 col-lg-6">
+                        <div class="form-group">
+                            <label for="txtphone">category</label>
+                            <select class="form-control" formControlName="category">
+                                <option value="">Select</option>
+                                <option *ngFor="let item of designationdata" value="{{item.code}}">
+                                    {{item.name}}
+                                </option>
+                            </select>
+                        </div>
+                        <span *ngIf="phone && phone.invalid && phone.touched">Please Enter category</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- <div class="offset-lg-3 col-lg-6">
+                        <div class="form-group">
+                            <label for="txtcode">Designation</label>
+                            <select class="form-control" formControlName="Designation">
+                                <option value="">Select</option>
+                                <option *ngFor="let item of designationdata" value="{{item.code}}">
+                                    {{item.name}}
+                                </option>
+                            </select>
+                            <span *ngIf="designation && designation.invalid && designation.touched">Please Enter designation</span>
+                        </div>
+                    </div> -->
+                </div><br>
+                <div class="offset-lg-3 col-lg-6 text-center">
+                    <span class="{{messageclass}}">{{message}}</span>
+                </div><br>
+                <div class="row d-flex justify-content-center">
+                    <div class="offset-lg-3 col-lg-6">
+                        <button class="btn btn-primary btn-sm w-50" >Save</button>
+                    </div>
+                 
+                </div><br>
+            </form>
+        </div>
+        <router-outlet></router-outlet>
+    </div>
+</div>

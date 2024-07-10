@@ -1,0 +1,42 @@
+<div class="container mt-5">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-5">
+           <div class="card shadow">
+            <div class="card-body">
+                <h1 class="text-center fw-bold" >Login Form</h1>
+                <p>Login with the data you entered during your registration.</p>
+                <form action="" autocomplete="off">
+                    <div class="form-group">
+                        <label for="" class="form-label">Login Id</label>
+                        <input type="text" class="form-control" name="email" [(ngModel)]="email">
+                    </div><br>
+                    <div class="form-group">
+                        <label for="" class="form-label">Password</label>
+                        <input type="text" class="form-control" name="password" id="" [(ngModel)]="password">
+                    </div><br>
+                    <div class="text-center">
+                        <button class="btn btn-primary btn-sm w-50" (click)="loginproceed()">Login</button>
+                    </div><br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="/register" style="text-decoration: none;">Need Account? <span class="text-danger">Register</span></a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="/forgot-password" style="text-decoration: none;" class="text-danger float-end">Forgot Password ? </a>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <a (click)="signInwithGoogle()" style="text-decoration: none;cursor: pointer;">
+                            <div class="text-center">
+                                <div class="">
+                                    <img src="../../assets/googlesignin.png" style="width: 30vh;height: auto;" alt="Sign In with Google">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </form>
+            </div>
+           </div>
+        </div>
+    </div>
+</div>
